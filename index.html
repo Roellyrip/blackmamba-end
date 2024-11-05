@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Mamba Todoist</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import font dari google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Tambahkan link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1>Black Mamba Todo List</h1>
+            <!-- Toogle mode terang dan gelap menggunakan checkbox -->
+            <div class="theme">
+                <input type="checkbox" name="toogle-theme" id="toogle-theme">
+                <label for="toogle-theme">
+                    <i class="fas fa-lightbulb" style="color: white;"></i>
+                    <i class="fas fa-lightbulb" style="color: black;"></i>
+                </label>
+            </div>
+        </div>
+        <!-- Menampilkan tanggal dan waktu secara real-time -->
+        <div class="date-time">
+            <div id="current-date"></div>
+            <div id="current-time"></div>
+        </div>
+        <!-- Menampilkan tanggal dalam satu minggu -->
+        <table>
+            <tr class="weekdays">
+                <td><div class="days">Sun</div></td>
+                <td><div class="days">Mon</div></td>
+                <td><div class="days">Tue</div></td>
+                <td><div class="days">Wed</div></td>
+                <td><div class="days">Thu</div></td>
+                <td><div class="days">Fri</div></td>
+                <td><div class="days">Sat</div></td>
+            </tr>
+            <tr class="dates">
+                <td><div class="date" id="date0"></div></td>
+                <td><div class="date" id="date1"></div></td>
+                <td><div class="date" id="date2"></div></td>
+                <td><div class="date" id="date3"></div></td>
+                <td><div class="date" id="date4"></div></td>
+                <td><div class="date" id="date5"></div></td>
+                <td><div class="date" id="date6"></div></td>
+            </tr>
+        </table>
+        <!-- Aplikasi todo list -->
+        <div class="todo-container">
+            <div class="todo-input">
+                <input type="text" name="todo-input" id="todo-input">
+                <button id="add-btn" type="submit" onclick="addTask()">Add Task</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
